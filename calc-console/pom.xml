@@ -11,7 +11,6 @@
     <artifactId>calc-console</artifactId>
     <packaging>jar</packaging>
 
-    <!-- Dependencies -->
     <dependencies>
         <dependency>
             <groupId>edu.dnu.fpm.pz</groupId>
@@ -25,10 +24,8 @@
         </dependency>
     </dependencies>
 
-    <!-- Build Configuration -->
     <build>
         <plugins>
-            <!-- Maven Assembly Plugin for creating a Fat JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>

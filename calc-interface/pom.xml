@@ -10,6 +10,5 @@
 <artifactId>calc-interface</artifactId>
 <packaging>jar</packaging>
 <dependencies>
-    <!-- No dependencies for interface module -->
 </dependencies>
 </project>
