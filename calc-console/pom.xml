@@ -1,9 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Основні дані про модуль -->
     <parent>
         <groupId>edu.dnu.fpm.pz</groupId>
         <artifactId>Homework</artifactId>
@@ -13,16 +11,13 @@
     <artifactId>calc-console</artifactId>
     <packaging>jar</packaging>
 
-    <!-- Залежності -->
+    <!-- Dependencies -->
     <dependencies>
-        <!-- Залежність на calc-interface -->
         <dependency>
             <groupId>edu.dnu.fpm.pz</groupId>
             <artifactId>calc-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-        <!-- Залежність на calc-core -->
         <dependency>
             <groupId>edu.dnu.fpm.pz</groupId>
             <artifactId>calc-core</artifactId>
@@ -30,9 +25,10 @@
         </dependency>
     </dependencies>
 
-    <!-- Плагін для створення jar з усіма залежностями -->
+    <!-- Build Configuration -->
     <build>
         <plugins>
+            <!-- Maven Assembly Plugin for creating a Fat JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -43,7 +39,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>edu.dnu.fpm.pz.Main</mainClass>
+                            <mainClass>Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -60,3 +56,4 @@
         </plugins>
     </build>
 </project>
+
